@@ -1,0 +1,36 @@
+
+.navbar {
+  background: white;   /* dark navy background */
+  
+  padding: 5px 30px;
+  border-radius: 50px;   /* makes the left + right sides fully curved */
+  margin: 20px auto;     /* center horizontally */
+  width: 70%;            /* not full width, so curves are visible */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* soft shadow */
+}
+.logo img {
+  width: 100px;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.create-btn {
+  background: purple;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
