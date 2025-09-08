@@ -10,7 +10,7 @@ function JobForm({formData, setFormData, onClose }) {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const response = await fetch("https://jobmanagement-server.onrender.com", {
+  const response = await fetch("https://jobmanagement-server.onrender.com/api/jobs", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
