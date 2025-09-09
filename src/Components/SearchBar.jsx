@@ -57,7 +57,7 @@ export default function SearchBar({ onFilterChange }) {
       </select>
       <div className="salary-filter">
         <label>
-          Salary Range: <b>{ranges[filters.salaryIndex]}</b>
+          Salary per Year: <b>{ranges[filters.salaryIndex]}</b>
         </label>
         <input
           type="range"
