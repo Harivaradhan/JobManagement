@@ -8,7 +8,7 @@ function JobsPage() {
   const [isFiltering, setIsFiltering] = useState(false); // new flag
 
   useEffect(() => {
-    fetch("https://jobmanagement-server.onrender.com/JobServlet/api/jobs")
+    fetch("https://jobmanagement-server.onrender.com/api/jobs")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
