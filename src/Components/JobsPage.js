@@ -57,7 +57,7 @@ function JobsPage() {
       ];
       const [min, max] = ranges[filters.salaryIndex];
       results = results.filter(
-        (job) => job.salaryMin >= min && job.salaryMax <= max
+        (job) => job.salaryMin >= min && job.salaryMin <= max
       );
     }
 
