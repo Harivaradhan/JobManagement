@@ -8,7 +8,7 @@ function JobsPage() {
 
   // Fetch all jobs from backend once
   useEffect(() => {
-    fetch("https://jobmanagement-server.onrender.com/api/jobs") // replace with your actual endpoint
+    fetch("https://jobmanagement-server.onrender.com/api/jobs") 
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -20,28 +20,28 @@ function JobsPage() {
   const handleFilterChange = (filters) => {
     let results = jobs;
 
-    // Apply title filter if user types
+    // for Apply filter if user types
     if (filters.title) {
       results = results.filter((job) =>
         job.title.toLowerCase().includes(filters.title.toLowerCase())
       );
     }
 
-    // Apply location filter if user types
+    // for location filter if user types
     if (filters.location) {
       results = results.filter((job) =>
         job.location.toLowerCase().includes(filters.location.toLowerCase())
       );
     }
 
-    // Apply job type filter if selected
+    // for Apply job type filter if selected
     if (filters.type && filters.type !== "") {
       results = results.filter(
         (job) => job.jobType.toLowerCase() === filters.type.toLowerCase()
       );
     }
 
-    // Apply salary range filter if slider moved
+    // salary filter will be applied if slider is moved
     if (filters.salaryIndex !== null && filters.salaryIndex !== 0) {
       const ranges = [
         [0, 100000],
