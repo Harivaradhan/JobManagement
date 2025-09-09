@@ -3,16 +3,16 @@ import "./SearchBar.css";
 
 export default function SearchBar({ onFilterChange }) {
   const ranges = [
-    "0k - 10k",
-    "10k - 20k",
-    "20k - 30k",
-    "30k - 40k",
-    "40k - 50k",
-    "50k - 60k",
-    "60k - 70k",
-    "70k - 80k",
-    "80k - 90k",
-    "90k - 100k",
+    "0L - 1L",
+    "1L - 2L",
+    "2L - 3L",
+    "3L - 4L",
+    "4L - 5L",
+    "5L - 6L",
+    "6L - 7L",
+    "7L - 8L",
+    "8L - 9L",
+    "9L - 10L",
   ];
 
   const [filters, setFilters] = useState({
