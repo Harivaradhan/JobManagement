@@ -1,15 +1,15 @@
 
 .navbar {
-  background: white;   /* dark navy background */
+  background: white;   
   
   padding: 5px 30px;
-  border-radius: 50px;   /* makes the left + right sides fully curved */
+  border-radius: 50px;   /* for curved ends*/
   margin: 20px auto;     /* center horizontally */
-  width: 70%;            /* not full width, so curves are visible */
+  width: 70%;            
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* soft shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /*shadow */
 }
 .logo img {
   width: 100px;
