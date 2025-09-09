@@ -44,16 +44,16 @@ function JobsPage() {
     // Apply salary range filter if slider moved
     if (filters.salaryIndex !== null && filters.salaryIndex !== 0) {
       const ranges = [
-        [0, 10000],
-        [10000, 20000],
-        [20000, 30000],
-        [30000, 40000],
-        [40000, 50000],
-        [50000, 60000],
-        [60000, 70000],
-        [70000, 80000],
-        [80000, 90000],
-        [90000, 100000],
+        [0, 100000],
+        [100000, 200000],
+        [200000, 300000],
+        [300000, 400000],
+        [400000, 500000],
+        [500000, 600000],
+        [600000, 700000],
+        [700000, 800000],
+        [800000, 900000],
+        [900000, 1000000],
       ];
       const [min, max] = ranges[filters.salaryIndex];
       results = results.filter(
