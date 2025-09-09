@@ -3,38 +3,29 @@ import "./SearchBar.css";
 
 export default function SearchBar({ onFilterChange }) {
   const ranges = [
-    [0, 10000],
-    [10000, 20000],
-    [20000, 30000],
-    [30000, 40000],
-    [40000, 50000],
-    [50000, 60000],
-    [60000, 70000],
-    [70000, 80000],
-    [80000, 90000],
-    [90000, 100000],
+    "0k - 10k",
+    "10k - 20k",
+    "20k - 30k",
+    "30k - 40k",
+    "40k - 50k",
+    "50k - 60k",
+    "60k - 70k",
+    "70k - 80k",
+    "80k - 90k",
+    "90k - 100k",
   ];
 
   const [filters, setFilters] = useState({
     title: "",
     location: "",
-    jobType: "",
+    type: "",
     salaryIndex: 0,
   });
 
   const handleChange = (field, value) => {
     const updated = { ...filters, [field]: value };
-
-    // also send real salary range to parent
-    const salaryRange = ranges[updated.salaryIndex];
-    onFilterChange({ 
-      title: updated.title,
-      location: updated.location,
-      jobType: updated.jobType,
-      salaryRange: salaryRange
-    });
-
     setFilters(updated);
+    onFilterChange(updated); // send to parent for filtering
   };
 
   return (
@@ -55,8 +46,8 @@ export default function SearchBar({ onFilterChange }) {
       />
       <select
         className="search-select"
-        value={filters.jobType}
-        onChange={(e) => handleChange("jobType", e.target.value)}
+        value={filters.type}
+        onChange={(e) => handleChange("type", e.target.value)}
       >
         <option value="">Job Type</option>
         <option>Full-Time</option>
@@ -66,18 +57,16 @@ export default function SearchBar({ onFilterChange }) {
       </select>
       <div className="salary-filter">
         <label>
-          Salary Range:{" "}
-          <b>
-            {ranges[filters.salaryIndex][0] / 1000}k -{" "}
-            {ranges[filters.salaryIndex][1] / 1000}k
-          </b>
+          Salary Range: <b>{ranges[filters.salaryIndex]}</b>
         </label>
         <input
           type="range"
           min="0"
           max={ranges.length - 1}
           value={filters.salaryIndex}
-          onChange={(e) => handleChange("salaryIndex", Number(e.target.value))}
+          onChange={(e) =>
+            handleChange("salaryIndex", Number(e.target.value))
+          }
         />
       </div>
     </div>
